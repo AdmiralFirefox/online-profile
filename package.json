@@ -10,5 +10,10 @@
   },
   "devDependencies": {
     "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "^5.1.1",
+    "rellax": "^1.12.1",
+    "sass": "^1.83.4"
   }
 }
