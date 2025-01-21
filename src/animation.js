@@ -1,5 +1,22 @@
+import Rellax from "rellax";
+
 const fadeUpAnimate = document.querySelectorAll("#fade-up-animation");
 const titleSlide = document.querySelectorAll("#title-slide");
+
+const parallaxEffect = () => {
+  const rellax = new Rellax(".hero-title", {
+    speed: -6,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false,
+  });
+
+  return rellax;
+};
+
+parallaxEffect();
 
 // Fade Up Animation
 const fadeObserver = new IntersectionObserver(
