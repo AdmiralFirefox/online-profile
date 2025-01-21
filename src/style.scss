@@ -1,3 +1,6 @@
+@use "mixins" as mixin;
+@use "color" as color;
+
 :root {
   color-scheme: dark;
 }
@@ -9,7 +12,7 @@
 }
 
 body {
-  background: #000;
+  background: color.$black-color;
 }
 
 // Hero Section
@@ -25,7 +28,7 @@ body {
       font-family: "Poppins", sans-serif;
       font-weight: 700;
       font-size: clamp(2rem, 5vw, 3.5rem);
-      color: #ffffff;
+      color: color.$white-color;
       text-align: center;
       line-height: 1.1em;
     }
@@ -106,22 +109,7 @@ body {
     }
 
     h1 {
-      font-family: "Poppins", sans-serif;
-      font-size: 2.5rem;
-      margin-top: 0.35em;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      &::after {
-        content: "";
-        width: 0em;
-        height: 0.2em;
-        background: #c22085;
-        display: block;
-        transition: width 1.3s ease-in-out;
-      }
+      @include mixin.section-title();
     }
 
     .title-slide {
@@ -140,6 +128,7 @@ body {
 
     p {
       font-family: "Poppins", sans-serif;
+      color: color.$white-color;
       font-size: 1.2rem;
       text-align: center;
       opacity: 0;
@@ -160,6 +149,59 @@ body {
     .about-content {
       p {
         text-align: left;
+      }
+    }
+  }
+}
+
+// Skills Section
+.skills-section {
+  margin-bottom: 7em;
+
+  h1 {
+    @include mixin.section-title();
+  }
+
+  .title-slide {
+    &::after {
+      width: 3em;
+    }
+  }
+
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    width: min(80em, 85%);
+    margin: 3em auto 0em auto;
+
+    .skill-content {
+      background: color.$pink-color;
+      padding: 1.1em;
+      border-radius: 15px;
+      width: min(20em, 100%);
+
+      p {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 600;
+        border-bottom: 3.5px solid color.$white-color;
+        margin-bottom: 0.3em;
+        color: color.$white-color;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3em;
+
+        li {
+          font-family: "Poppins", sans-serif;
+          font-size: 1.2rem;
+          color: color.$white-color;
+        }
       }
     }
   }

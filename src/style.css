@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #000;
+  background: #000000;
 }
 
 .hero-section .hero-title {
@@ -116,6 +116,7 @@ body {
 }
 .about-section .about-content p {
   font-family: "Poppins", sans-serif;
+  color: #ffffff;
   font-size: 1.2rem;
   text-align: center;
   opacity: 0;
@@ -134,6 +135,63 @@ body {
   .about-section .about-content p {
     text-align: left;
   }
+}
+
+.skills-section {
+  margin-bottom: 7em;
+}
+.skills-section h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  margin-top: 0.35em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills-section h1::after {
+  content: "";
+  width: 0em;
+  height: 0.2em;
+  background: #c22085;
+  display: block;
+  transition: width 1.3s ease-in-out;
+}
+.skills-section .title-slide::after {
+  width: 3em;
+}
+.skills-section .skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  width: min(80em, 85%);
+  margin: 3em auto 0em auto;
+}
+.skills-section .skills-container .skill-content {
+  background: #c22085;
+  padding: 1.1em;
+  border-radius: 15px;
+  width: min(20em, 100%);
+}
+.skills-section .skills-container .skill-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  border-bottom: 3.5px solid #ffffff;
+  margin-bottom: 0.3em;
+  color: #ffffff;
+}
+.skills-section .skills-container .skill-content ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+}
+.skills-section .skills-container .skill-content ul li {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

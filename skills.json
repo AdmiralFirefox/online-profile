@@ -1,0 +1,22 @@
+{
+  "frontend": [
+    "HTML",
+    "CSS",
+    "SASS",
+    "Tailwind",
+    "React.js",
+    "Next.js",
+    "Astro",
+    "Flutter"
+  ],
+  "backend": ["Node.js", "Express", "Flask"],
+  "databases": [
+    "Firebase",
+    "Supabase",
+    "Prisma",
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB"
+  ],
+  "machine_learning": ["Tensorflow", "PyTorch", "Google Colab"]
+}
