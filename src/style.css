@@ -166,13 +166,16 @@ body {
   flex-wrap: wrap;
   gap: 2em;
   width: min(80em, 85%);
-  margin: 3em auto 0em auto;
+  margin: 2.5em auto 0em auto;
 }
 .skills-section .skills-container .skill-content {
   background: #c22085;
   padding: 1.1em;
   border-radius: 15px;
   width: min(20em, 100%);
+  opacity: 0;
+  transform: translateY(2em);
+  transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
 }
 .skills-section .skills-container .skill-content p {
   font-family: "Poppins", sans-serif;
@@ -192,6 +195,10 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   color: #ffffff;
+}
+.skills-section .skills-container .fade-up-animate {
+  opacity: 1;
+  transform: translateY(0em);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -174,13 +174,16 @@ body {
     flex-wrap: wrap;
     gap: 2em;
     width: min(80em, 85%);
-    margin: 3em auto 0em auto;
+    margin: 2.5em auto 0em auto;
 
     .skill-content {
       background: color.$pink-color;
       padding: 1.1em;
       border-radius: 15px;
       width: min(20em, 100%);
+      opacity: 0;
+      transform: translateY(2em);
+      transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
 
       p {
         font-family: "Poppins", sans-serif;
@@ -203,6 +206,11 @@ body {
           color: color.$white-color;
         }
       }
+    }
+
+    .fade-up-animate {
+      opacity: 1;
+      transform: translateY(0em);
     }
   }
 }
