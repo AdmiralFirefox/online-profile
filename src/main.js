@@ -64,9 +64,11 @@ skills.machine_learning.map((skill, index) => {
 projects.map((project) => {
   const revBlock = document.createElement("li");
   revBlock.className = "rev-block";
+  revBlock.id = "reveal-animation";
 
   const projectContent = document.createElement("div");
   projectContent.className = "project-content";
+  projectContent.id = "reveal-opacity-animation";
 
   // Project Name
   const projectName = document.createElement("p");

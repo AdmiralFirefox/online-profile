@@ -244,9 +244,7 @@ body {
 
       .project-content {
         opacity: 0;
-        animation: appear-text 0.0001s linear forwards;
         border: 3px solid color.$pink-color;
-        animation-delay: 1.6s;
         padding: 1em;
 
         p {
@@ -277,6 +275,11 @@ body {
         }
       }
 
+      .reveal-opacity-animate {
+        animation: appear-text 0.0001s linear forwards;
+        animation-delay: 0.9s;
+      }
+
       &::after {
         content: "";
         top: 0;
@@ -285,8 +288,13 @@ body {
         width: 0%;
         height: 100%;
         background: color.$pink-color;
-        animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-        animation-delay: 1s;
+      }
+    }
+
+    .reveal-animate {
+      &::after {
+        animation: rev-block 1.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 0.3s;
       }
     }
   }

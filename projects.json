@@ -10,6 +10,11 @@
     "site_link": "https://safari-commerce.netlify.app/"
   },
   {
+    "name": "Sentiment Analyzer",
+    "description": "Performs analysis on a text to classify them as positive, negative, or neutral.",
+    "site_link": "https://nlp-sentiment-analysis-app.vercel.app/"
+  },
+  {
     "name": "SkyWatch",
     "description": "A weather application that tracks and forecast weather of a place. It has an autocompletion, can add places on bookmarks, and more.",
     "site_link": "https://skywatch-v2.netlify.app"
