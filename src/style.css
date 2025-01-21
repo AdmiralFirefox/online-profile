@@ -70,4 +70,59 @@ body {
   }
 }
 
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 4.5em 2em 8em 2em;
+}
+.about-section .profile-picture {
+  width: min(17em, 100%);
+}
+.about-section .profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about-section .profile-picture h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  margin-top: 0.35em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-section .profile-picture h1::after {
+  content: "";
+  width: 5.3em;
+  height: 0.2em;
+  background: #c22085;
+  display: block;
+}
+.about-section .about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.4em;
+  width: min(36em, 100%);
+}
+.about-section .about-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+@media (min-width: 46em) {
+  .about-section {
+    flex-direction: row;
+    gap: 4em;
+  }
+  .about-section .about-content p {
+    text-align: left;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
