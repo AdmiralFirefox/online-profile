@@ -98,10 +98,14 @@ body {
 }
 .about-section .profile-picture h1::after {
   content: "";
-  width: 5.3em;
+  width: 0em;
   height: 0.2em;
   background: #c22085;
   display: block;
+  transition: width 1.3s ease-in-out;
+}
+.about-section .profile-picture .title-slide::after {
+  width: 5.3em;
 }
 .about-section .about-content {
   display: flex;
@@ -114,6 +118,13 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   text-align: center;
+  opacity: 0;
+  transform: translateY(2em);
+  transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+}
+.about-section .about-content .fade-up-animate {
+  opacity: 1;
+  transform: translateY(0em);
 }
 @media (min-width: 46em) {
   .about-section {
