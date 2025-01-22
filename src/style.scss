@@ -300,6 +300,57 @@ body {
   }
 }
 
+// Interests Section
+.interests-section {
+  margin-bottom: 7em;
+
+  h1 {
+    @include mixin.section-title();
+  }
+
+  .title-slide {
+    &::after {
+      width: 5em;
+    }
+  }
+
+  .interests-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3em 1.5em 0em 1.5em;
+    gap: 2.5em;
+
+    .interests-info {
+      border: 3px solid color.$pink-color;
+      border-radius: 15px;
+      width: min(22em, 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5em 1em;
+
+      .interests-icon {
+        width: 3.5em;
+        height: 3.5em;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      p {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.1rem;
+        text-align: center;
+        margin-top: 1em;
+      }
+    }
+  }
+}
+
 @keyframes rev-block {
   0% {
     left: 0;
