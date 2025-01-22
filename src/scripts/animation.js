@@ -1,11 +1,25 @@
 import Rellax from "rellax";
 
+const initialTextAnimation = document.querySelector("#initialTextAnimation");
 const fadeUpAnimate = document.querySelectorAll("#fade-up-animation");
 const titleSlide = document.querySelectorAll("#title-slide");
 const revealOpacityAnimate = document.querySelectorAll(
   "#reveal-opacity-animation"
 );
 const revealAnimate = document.querySelectorAll("#reveal-animation");
+
+// Inital Text Animation
+function removeElement() {
+  initialTextAnimation.classList.add("removed");
+
+  document.getElementsByTagName("body")[0].style.overflowY = "scroll";
+}
+
+initialTextAnimation.addEventListener("transitionend", () => {
+  initialTextAnimation.remove();
+});
+
+setTimeout(removeElement, 2800);
 
 const parallaxEffect = () => {
   const rellax = new Rellax(".hero-title", {
