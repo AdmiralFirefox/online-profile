@@ -1,5 +1,5 @@
-import skills from "../skills.json";
-import projects from "../projects.json";
+import skills from "../../data/skills.json";
+import projects from "../../data/projects.json";
 
 // Skills and Projects
 const frontendSkills = document.querySelector("[data-skills-frontend]");
