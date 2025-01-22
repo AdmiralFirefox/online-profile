@@ -16,3 +16,8 @@
     transition: width 1.3s ease-in-out;
   }
 }
+
+@mixin navbar-bg() {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+}

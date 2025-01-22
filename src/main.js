@@ -1,13 +1,56 @@
 import skills from "../skills.json";
 import projects from "../projects.json";
 
+// Navbar
+const navIcon = document.querySelector("#check");
+const mobileNavbar = document.querySelector("#mobile-navbar");
+const webLogo = document.querySelector("#weblogo");
+const navbarOverlay = document.querySelector("#navbar-overlay");
+
+// Skills and Projects
 const frontendSkills = document.querySelector("[data-skills-frontend]");
 const backendSkills = document.querySelector("[data-skills-backend]");
 const databaseSkills = document.querySelector("[data-skills-databases]");
 const mlSkills = document.querySelector("[data-skills-ml]");
 const projectsData = document.querySelector("[data-projects]");
+
+// Accordion
 const accHeading = document.querySelectorAll(".accordion");
 const accPanel = document.querySelectorAll(".panel");
+
+// Toggle Navbar
+const toggleNavbar = () => {
+  mobileNavbar.classList.toggle("navbar-active");
+  navbarOverlay.classList.toggle("navbar-overlay-active");
+
+  if (!mobileNavbar.classList.contains("navbar-active")) {
+    document.getElementsByTagName("body")[0].style.overflow = "unset";
+
+    navIcon.checked = false;
+  } else {
+    document.getElementsByTagName("body")[0].style.overflow = "hidden";
+
+    // Web Logo
+    webLogo.addEventListener("click", () => {
+      document.getElementsByTagName("body")[0].style.overflow = "unset";
+
+      mobileNavbar.classList.remove("navbar-active");
+      navbarOverlay.classList.remove("navbar-overlay-active");
+
+      navIcon.checked = false;
+    });
+  }
+};
+
+navIcon.addEventListener("click", toggleNavbar);
+
+// Navbar Links
+for (const child of mobileNavbar.children) {
+  child.addEventListener("click", toggleNavbar);
+}
+
+// Navbar Overlay
+navbarOverlay.addEventListener("click", toggleNavbar);
 
 // Frontend Skills
 skills.frontend.map((skill, index) => {
