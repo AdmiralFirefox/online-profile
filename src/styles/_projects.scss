@@ -21,7 +21,7 @@
     align-items: flex-start;
     gap: 2.5em;
     margin: 3.5em auto 0em auto;
-    width: min(45em, 85%);
+    width: min(53em, 85%);
     list-style: none;
 
     .rev-block {
@@ -30,21 +30,21 @@
 
       .project-content {
         opacity: 0;
-        border: 3px solid color.$pink-color;
-        padding: 1em;
+        border: 3.7px solid color.$pink-color;
+        padding: 1.4em 1.5em;
 
         p {
           font-family: "Poppins", sans-serif;
           color: color.$white-color;
 
           &:first-of-type {
-            font-size: 1.3rem;
+            font-size: 1.7rem;
             font-weight: 600;
             margin-bottom: 0.3em;
           }
 
           &:last-of-type {
-            font-size: 1rem;
+            font-size: 1.2rem;
             margin-bottom: 1em;
           }
         }
