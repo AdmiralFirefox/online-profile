@@ -425,6 +425,49 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.contacts-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #923fe6;
+  padding: 7em 1.3em;
+}
+.contacts-section .contact-info h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 2.2rem;
+  line-height: 1.2em;
+}
+.contacts-section .contact-info p {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+  margin-top: 1.2em;
+}
+.contacts-section .contact-links {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+.contacts-section .contact-links a {
+  font-size: 2.2rem;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+.contacts-section .contact-links a:hover {
+  color: hsl(0, 0%, 80%);
+}
+@media (min-width: 30em) {
+  .contacts-section {
+    padding: 7.2em 2em;
+  }
+  .contacts-section .contact-info p {
+    margin-top: 0.5em;
+  }
+}
+
 @keyframes rev-block {
   0% {
     left: 0;
