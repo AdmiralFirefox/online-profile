@@ -154,7 +154,7 @@ body {
 .mobile-navbar {
   transform: translateY(-150vh);
   width: 100%;
-  height: calc(100vh - 5em);
+  height: calc(100vh - 4em);
   overflow-y: auto;
   @include mixin.navbar-bg();
   text-align: center;
@@ -188,7 +188,7 @@ body {
 
 // Navbar Active
 .navbar-active {
-  transform: translateY(5.1em);
+  transform: translateY(4.5em);
 }
 
 // Navbar

@@ -128,7 +128,7 @@ body {
 .mobile-navbar {
   transform: translateY(-150vh);
   width: 100%;
-  height: calc(100vh - 5em);
+  height: calc(100vh - 4em);
   overflow-y: auto;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(20px);
@@ -159,7 +159,7 @@ body {
   }
 }
 .navbar-active {
-  transform: translateY(5.1em);
+  transform: translateY(4.5em);
 }
 
 .navbar-overlay {
