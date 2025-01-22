@@ -320,6 +320,9 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 1.5em 1em;
+  opacity: 0;
+  transform: translateY(2em);
+  transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
 }
 .interests-section .interests-content .interests-info .interests-icon {
   width: 3.5em;
@@ -335,6 +338,10 @@ body {
   font-size: 1.1rem;
   text-align: center;
   margin-top: 1em;
+}
+.interests-section .interests-content .fade-up-animate {
+  opacity: 1;
+  transform: translateY(0em);
 }
 
 @keyframes rev-block {
