@@ -6,6 +6,8 @@ const backendSkills = document.querySelector("[data-skills-backend]");
 const databaseSkills = document.querySelector("[data-skills-databases]");
 const mlSkills = document.querySelector("[data-skills-ml]");
 const projectsData = document.querySelector("[data-projects]");
+const accHeading = document.querySelectorAll(".accordion");
+const accPanel = document.querySelectorAll(".panel");
 
 // Frontend Skills
 skills.frontend.map((skill, index) => {
@@ -91,3 +93,28 @@ projects.map((project) => {
   revBlock.appendChild(projectContent);
   projectsData.appendChild(revBlock);
 });
+
+// Shows Panel
+const showPanel = (elem) => {
+  hidePanels();
+  elem.classList.add("active");
+  elem.nextElementSibling.style.maxHeight = `${elem.nextElementSibling.scrollHeight}px`;
+};
+
+// Hides all shown Panels
+const hidePanels = () => {
+  for (let i = 0; i < accPanel.length; i++) {
+    accPanel[i].style.maxHeight = null;
+    accHeading[i].classList.remove("active");
+  }
+};
+
+for (let i = 0; i < accHeading.length; i++) {
+  accHeading[i].onclick = () => {
+    if (accHeading[i].nextElementSibling.style.maxHeight) {
+      hidePanels();
+    } else {
+      showPanel(accHeading[i]);
+    }
+  };
+}
