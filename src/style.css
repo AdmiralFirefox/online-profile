@@ -252,6 +252,7 @@ body {
   justify-content: center;
   gap: 2em;
   margin: 4.5em 2em 8em 2em;
+  scroll-margin: 5em;
 }
 .about-section .profile-picture {
   width: min(17em, 100%);
@@ -314,6 +315,7 @@ body {
 
 .skills-section {
   margin-bottom: 7em;
+  scroll-margin: 5em;
 }
 .skills-section h1 {
   font-family: "Poppins", sans-serif;
@@ -378,6 +380,7 @@ body {
 
 .projects-section {
   margin-bottom: 7em;
+  scroll-margin: 5em;
 }
 .projects-section h1 {
   font-family: "Poppins", sans-serif;
@@ -459,6 +462,7 @@ body {
 
 .interests-section {
   margin-bottom: 7em;
+  scroll-margin: 5em;
 }
 .interests-section h1 {
   font-family: "Poppins", sans-serif;
@@ -521,6 +525,7 @@ body {
 
 .questions-section {
   margin-bottom: 7em;
+  scroll-margin: 5em;
 }
 .questions-section h1 {
   font-family: "Poppins", sans-serif;
@@ -605,6 +610,7 @@ body {
   align-items: center;
   background: #923fe6;
   padding: 7em 1.3em;
+  scroll-margin: 5em;
 }
 .contacts-section .contact-info h1 {
   font-family: "Poppins", sans-serif;
