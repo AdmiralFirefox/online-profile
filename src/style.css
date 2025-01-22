@@ -189,7 +189,7 @@
   position: relative;
   top: 0;
   z-index: 2;
-  height: 39em;
+  height: 41em;
   user-select: none;
 }
 .hero-section .hero-landscape img {
@@ -202,7 +202,7 @@
   width: 100%;
   top: 0;
   z-index: 4;
-  height: 39em;
+  height: 41em;
   user-select: none;
 }
 .hero-section .hero-mountain img {
@@ -237,7 +237,7 @@
   align-items: center;
   justify-content: center;
   gap: 2em;
-  margin: 4.5em 2em 8em 2em;
+  margin: 8.5em 2em 8em 2em;
   scroll-margin: 5em;
 }
 .about-section .profile-picture {
@@ -293,6 +293,7 @@
   .about-section {
     flex-direction: row;
     gap: 4em;
+    margin: 6.5em 2em 8em 2em;
   }
   .about-section .about-content p {
     text-align: left;

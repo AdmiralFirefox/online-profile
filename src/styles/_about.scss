@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   gap: 2em;
-  margin: 4.5em 2em 8em 2em;
+  margin: 8.5em 2em 8em 2em;
   scroll-margin: 5em;
 
   .profile-picture {
@@ -57,6 +57,7 @@
   @media (min-width: 46em) {
     flex-direction: row;
     gap: 4em;
+    margin: 6.5em 2em 8em 2em;
 
     .about-content {
       p {
