@@ -1,0 +1,23 @@
+@use "themeprovider/color" as color;
+@use "navbar";
+@use "hero";
+@use "about";
+@use "skills";
+@use "projects";
+@use "interests";
+@use "questions";
+@use "contacts";
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: color.$black-color;
+}

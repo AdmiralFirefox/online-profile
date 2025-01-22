@@ -1,0 +1,63 @@
+@use "themeprovider/color" as color;
+@use "themeprovider/mixins" as mixin;
+
+.skills-section {
+  margin-bottom: 7em;
+  scroll-margin: 5em;
+
+  h1 {
+    @include mixin.section-title();
+  }
+
+  .title-slide {
+    &::after {
+      width: 3em;
+    }
+  }
+
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    width: min(80em, 85%);
+    margin: 2.5em auto 0em auto;
+
+    .skill-content {
+      background: color.$pink-color;
+      padding: 1.1em;
+      border-radius: 15px;
+      width: min(20em, 100%);
+      opacity: 0;
+      transform: translateY(2em);
+      transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+
+      p {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 600;
+        border-bottom: 3.5px solid color.$white-color;
+        margin-bottom: 0.3em;
+        color: color.$white-color;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3em;
+
+        li {
+          font-family: "Poppins", sans-serif;
+          font-size: 1.2rem;
+          color: color.$white-color;
+        }
+      }
+    }
+
+    .fade-up-animate {
+      opacity: 1;
+      transform: translateY(0em);
+    }
+  }
+}

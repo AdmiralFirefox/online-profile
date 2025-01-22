@@ -1,0 +1,67 @@
+@use "themeprovider/color" as color;
+@use "themeprovider/mixins" as mixin;
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 4.5em 2em 8em 2em;
+  scroll-margin: 5em;
+
+  .profile-picture {
+    width: min(17em, 100%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    h1 {
+      @include mixin.section-title();
+    }
+
+    .title-slide {
+      &::after {
+        width: 5.3em;
+      }
+    }
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.4em;
+    width: min(36em, 100%);
+
+    p {
+      font-family: "Poppins", sans-serif;
+      color: color.$white-color;
+      font-size: 1.2rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(2em);
+      transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+    }
+
+    .fade-up-animate {
+      opacity: 1;
+      transform: translateY(0em);
+    }
+  }
+
+  @media (min-width: 46em) {
+    flex-direction: row;
+    gap: 4em;
+
+    .about-content {
+      p {
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@use "themeprovider/color" as color;
+@use "themeprovider/mixins" as mixin;
+
+.questions-section {
+  margin-bottom: 7em;
+  scroll-margin: 5em;
+
+  h1 {
+    @include mixin.section-title();
+  }
+
+  .title-slide {
+    &::after {
+      width: 2.6em;
+    }
+  }
+
+  .question-and-answer-content {
+    display: flex;
+    flex-direction: column;
+    margin: 2.7em auto 0em auto;
+    width: min(90%, 50em);
+
+    .accordion {
+      font-family: "Poppins", sans-serif;
+      background: color.$pink-color;
+      color: color.$white-color;
+      cursor: pointer;
+      padding: 1.1em;
+      font-size: 1.3rem;
+      font-weight: 600;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      transition: 0.4s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .active,
+    .accordion:hover {
+      background: color.$pink-color;
+    }
+
+    .accordion:after {
+      content: "\002B";
+      color: color.$white-color;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-left: 0.7em;
+    }
+
+    .active:after {
+      content: "\2212";
+      color: color.$white-color;
+      font-size: 1.3rem;
+      margin-left: 0.7em;
+    }
+
+    .panel {
+      background: color.$pink-color;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      margin-bottom: 1.5em;
+      user-select: none;
+
+      p {
+        padding: 0em 1.2em 1.2em 1.2em;
+        width: 100%;
+        color: color.$white-color;
+        line-height: 1.7em;
+        font-size: 1.1rem;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+  }
+}
