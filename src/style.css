@@ -187,7 +187,7 @@ body {
   position: absolute;
   width: 100%;
   z-index: 3;
-  margin-top: 3.8em;
+  margin-top: 7.1em;
   padding: 0em 1.5em;
 }
 .hero-section .hero-title h1 {
@@ -233,6 +233,9 @@ body {
   z-index: 5;
 }
 @media (min-width: 40em) {
+  .hero-section .hero-title {
+    margin-top: 6.65em;
+  }
   .hero-section .hero-landscape {
     height: 50em;
   }

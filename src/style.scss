@@ -220,7 +220,7 @@ body {
     position: absolute;
     width: 100%;
     z-index: 3;
-    margin-top: 3.8em;
+    margin-top: 7.1em;
     padding: 0em 1.5em;
 
     h1 {
@@ -278,6 +278,10 @@ body {
   }
 
   @media (min-width: 40em) {
+    .hero-title {
+      margin-top: 6.65em;
+    }
+
     .hero-landscape {
       height: 50em;
     }
